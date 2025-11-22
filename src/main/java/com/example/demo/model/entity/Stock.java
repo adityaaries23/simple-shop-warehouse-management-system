@@ -4,10 +4,12 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.SQLRestriction;
 
 @Getter
 @Setter
 @Entity
+@SQLRestriction("is_deleted = false")
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

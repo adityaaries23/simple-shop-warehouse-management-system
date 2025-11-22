@@ -1,7 +1,8 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.entity.Stock;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StockRepository extends Repository<Stock, Long> {
+
+public interface StockRepository extends JpaRepository<Stock, Long> {
 }

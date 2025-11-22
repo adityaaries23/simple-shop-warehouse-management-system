@@ -4,12 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.SQLRestriction;
 
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @Entity
+@SQLRestriction("is_deleted = false")
 public class Pricing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
