@@ -1,5 +1,6 @@
 package com.example.demo.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,6 +32,7 @@ public class Variant extends BaseEntity {
 
     @ColumnDefault("0")
     @Column(name = "is_deleted", nullable = false)
+    @JsonIgnore
     private Boolean isDeleted = false;
 
 }

@@ -9,7 +9,6 @@ import org.hibernate.annotations.SQLRestriction;
 @Getter
 @Setter
 @Entity
-@SQLRestriction("is_deleted = false")
 public class Stock extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +22,4 @@ public class Stock extends BaseEntity {
     @ColumnDefault("0")
     @Column(name = "quantity", nullable = false)
     private Integer quantity;
-
-    @ColumnDefault("0")
-    @Column(name = "is_deleted", nullable = false)
-    private Boolean isDeleted = false;
-
 }

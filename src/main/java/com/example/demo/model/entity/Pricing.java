@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
-@SQLRestriction("is_deleted = false")
 public class Pricing extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +27,4 @@ public class Pricing extends BaseEntity {
     @ColumnDefault("'IDR'")
     @Column(name = "currency", nullable = false, length = 10)
     private String currency;
-
-    @ColumnDefault("0")
-    @Column(name = "is_deleted", nullable = false)
-    private Boolean isDeleted = false;
-
 }

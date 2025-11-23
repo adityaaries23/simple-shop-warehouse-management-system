@@ -9,7 +9,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class ItemRequest {
+public class ItemUpdateRequest {
     @NotEmpty
     @NotNull
     @Size(min = 1, max = 255)
@@ -22,5 +22,5 @@ public class ItemRequest {
     @NotNull
     @NotEmpty
     @Valid
-    List<VariantRequest> variants;
+    List<VariantUpdateRequest> variants;
 }
