@@ -1,6 +1,5 @@
 package com.example.demo.model.response;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.data.domain.Page;
 

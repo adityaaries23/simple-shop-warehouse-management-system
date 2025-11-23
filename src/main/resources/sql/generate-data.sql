@@ -18,26 +18,26 @@ VALUES (1, 1, 'Small', 'White', 'TS-W-S', FALSE,NOW()),
        (10, 2, '34x32', 'Black', 'JF-K-3432', TRUE,NOW());
 
 
-INSERT INTO pricing (id, variant_id, price, currency, is_deleted,created_at)
-VALUES (101, 1, 19.99, 'USD', FALSE,NOW()),
-       (102, 2, 19.99, 'USD', FALSE,NOW()),
-       (103, 3, 21.99, 'USD', FALSE,NOW()),
-       (104, 4, 79.50, 'USD', FALSE,NOW()),
-       (105, 5, 79.50, 'USD', FALSE,NOW()),
-       (106, 6, 119.99, 'USD', FALSE,NOW()),
-       (107, 7, 129.99, 'USD', FALSE,NOW()),
-       (108, 8, 129.99, 'USD', FALSE,NOW()),
-       (109, 9, 19.99, 'USD', FALSE,NOW()),
-       (110, 10, 85.00, 'USD', TRUE,NOW());
+INSERT INTO pricing (id, variant_id, price, currency, created_at)
+VALUES (101, 1, 19.99, 'USD', NOW()),
+       (102, 2, 19.99, 'USD', NOW()),
+       (103, 3, 21.99, 'USD', NOW()),
+       (104, 4, 79.50, 'USD', NOW()),
+       (105, 5, 79.50, 'USD', NOW()),
+       (106, 6, 119.99, 'USD', NOW()),
+       (107, 7, 129.99, 'USD', NOW()),
+       (108, 8, 129.99, 'USD', NOW()),
+       (109, 9, 19.99, 'USD', NOW()),
+       (110, 10, 85.00, 'USD', NOW());
 
-INSERT INTO stock (id, variant_id, quantity, is_deleted,created_at)
-VALUES (201, 1, 150, FALSE, NOW()),
-       (202, 2, 225, FALSE, NOW()),
-       (203, 3, 90, FALSE, NOW()),
-       (204, 4, 45, FALSE, NOW()),
-       (205, 5, 18, FALSE, NOW()),
-       (206, 6, 60, FALSE, NOW()),
-       (207, 7, 0, FALSE, NOW()),
-       (208, 8, 12, FALSE, NOW()),
-       (209, 9, 105, FALSE, NOW()),
-       (210, 10, 30, TRUE, NOW());
+INSERT INTO stock (id, variant_id, quantity, created_at)
+VALUES (201, 1, 150,  NOW()),
+       (202, 2, 225,  NOW()),
+       (203, 3, 90,  NOW()),
+       (204, 4, 45,  NOW()),
+       (205, 5, 18,  NOW()),
+       (206, 6, 60,  NOW()),
+       (207, 7, 0,  NOW()),
+       (208, 8, 12,  NOW()),
+       (209, 9, 105,  NOW()),
+       (210, 10, 30,  NOW());

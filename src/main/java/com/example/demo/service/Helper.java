@@ -7,5 +7,4 @@ public class Helper {
         if (s == null || s.isEmpty()) s = DefaultConstant.EMPTY_STRING;
         return "%"+s+"%";
     }
-
 }
