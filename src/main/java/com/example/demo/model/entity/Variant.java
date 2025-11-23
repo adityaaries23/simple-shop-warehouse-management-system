@@ -10,7 +10,7 @@ import org.hibernate.annotations.SQLRestriction;
 @Setter
 @Entity
 @SQLRestriction("is_deleted = false")
-public class Variant {
+public class Variant extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Setter
 @Entity
 @SQLRestriction("is_deleted = false")
-public class Pricing {
+public class Pricing extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

@@ -1,5 +1,6 @@
 package com.example.demo.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +11,7 @@ import org.hibernate.annotations.SQLRestriction;
 @Setter
 @Entity
 @SQLRestriction("is_deleted = false")
-public class Item {
+public class Item extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -25,6 +26,7 @@ public class Item {
 
     @ColumnDefault("0")
     @Column(name = "is_deleted", nullable = false)
+    @JsonIgnore
     private Boolean isDeleted = false;
 
 }
