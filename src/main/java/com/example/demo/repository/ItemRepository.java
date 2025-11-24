@@ -22,8 +22,8 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
            MAX(s.quantity) as item_quantity
     FROM item i
              JOIN variant v ON i.id = v.item_id AND v.is_deleted = false
-             JOIN pricing p ON v.id = p.variant_id AND p.is_deleted = false
-             JOIN stock s ON v.id = s.variant_id AND s.is_deleted = false
+             JOIN pricing p ON v.id = p.variant_id
+             JOIN stock s ON v.id = s.variant_id
     WHERE i.is_deleted = false
       AND i.name LIKE :name
     GROUP BY i.id, i.name, i.description
@@ -31,8 +31,8 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     SELECT count(1)
     FROM item i
              JOIN variant v ON i.id = v.item_id AND v.is_deleted = false
-             JOIN pricing p ON v.id = p.variant_id AND p.is_deleted = false
-             JOIN stock s ON v.id = s.variant_id AND s.is_deleted = false
+             JOIN pricing p ON v.id = p.variant_id
+             JOIN stock s ON v.id = s.variant_id
     WHERE i.is_deleted = false
       AND i.name LIKE :name
     GROUP BY i.id, i.name, i.description
